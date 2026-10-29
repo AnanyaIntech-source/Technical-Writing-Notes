@@ -1,1 +1,101 @@
-
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\title[Beamer Lab]{Introduction to Beamer}
+\subtitle{Technical Writing Laboratory}
+\author{Ananya Siju}
+\institute{Department of Computer Science and Engineering\\MNIT Jaipur}
+\date{Academic Year 2026--2027}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\begin{frame}{Presentation Outline}\tableofcontents\end{frame}
+\section{Introduction}
+\begin{frame}{What is Beamer?}
+\begin{itemize}
+\item Beamer is a LaTeX document class for creating slides.
+\item Slides are called \textbf{frames}.
+\item A source file is compiled to a portable PDF.
+\item Ideal for mathematical and technical presentations.
+\end{itemize}
+\end{frame}
+\section{Core Features}
+\begin{frame}{Frames and Structured Lists}
+\begin{enumerate}
+\item Declare a frame with \texttt{\\begin\{frame\}}.
+\item Add a title and content.
+\item Close with \texttt{\\end\{frame\}}.
+\end{enumerate}
+\end{frame}
+\begin{frame}{Blocks and Emphasis}
+\begin{block}{Standard Block}Group related ideas in a named block.\end{block}
+\begin{alertblock}{Important}Keep slides concise and readable.\end{alertblock}
+\begin{exampleblock}{Example}Use \texttt{\textbackslash textbf} for bold text.\end{exampleblock}
+\end{frame}
+\begin{frame}{Overlays: Step-by-Step Reveal}
+\begin{itemize}
+\item<1-> First idea appears on overlay 1.
+\item<2-> Second idea appears on overlay 2.
+\item<3-> Third idea appears on overlay 3.
+\end{itemize}
+\end{frame}
+\section{Technical Content}
+\begin{frame}{Mathematical Typesetting}
+The quadratic formula is
+\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a},\qquad a\ne 0.\]
+An inline expression: $E=mc^2$.
+\end{frame}
+\begin{frame}{Tables in Beamer}
+\begin{table}
+\centering
+\begin{tabular}{ll}
+\toprule
+Feature & Purpose\\
+\midrule
+Frames & Organize slides\\
+Themes & Control presentation appearance\\
+Overlays & Reveal content progressively\\
+Blocks & Highlight related information\\
+\bottomrule
+\end{tabular}
+\caption{Common Beamer features}
+\end{table}
+\end{frame}
+\begin{frame}{Two-Column Layout}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{Advantages}
+\begin{itemize}\item Consistent design\item Excellent equations\item Version-control friendly\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{Considerations}
+\begin{itemize}\item Requires LaTeX syntax\item Compilation needed\item Fine-grained visual design can take time\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+\section{Workflow}
+\begin{frame}{Practical Workflow}
+\begin{enumerate}
+\item Write a \texttt{.tex} source file.
+\item Select a theme and add frames.
+\item Compile using \texttt{pdflatex} or Overleaf.
+\item Review the PDF and fix any errors.
+\item Commit both source and final output to GitHub.
+\end{enumerate}
+\end{frame}
+\begin{frame}{Learning Outcomes}
+\begin{itemize}
+\item Create slides using the Beamer class.
+\item Use themes, blocks, columns, equations, and tables.
+\item Understand overlay specifications.
+\item Compile a reproducible PDF presentation.
+\end{itemize}
+\end{frame}
+\begin{frame}[plain]
+\centering\Huge Thank You!\\[1em]
+\normalsize Technical Writing Laboratory\\MNIT Jaipur
+\end{frame}
+\end{document}
