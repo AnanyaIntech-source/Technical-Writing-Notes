@@ -115,8 +115,13 @@ manual documentation work.
 
 ---
 
-**Technical Writing Laboratory**
+## Contact
 
-**Module:** 03 — Doxygen
+**Ananya Siju**  
+[LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [GitHub](https://github.com/AnanyaIntech-source) | ananyasiju16@gmail.com
 
-**Author:** Ananya Siju
+---
+
+> **Author:** [Ananya Siju](https://github.com/AnanyaIntech-source)
+> 
+
