@@ -1,19 +1,64 @@
 
 # 📖 LaTeX — Detailed Notes and Command Reference
 
-## 1. Introduction
+> **From source code to professionally typeset documents.**
 
-LaTeX is a markup-based typesetting system. Rather than manually adjusting the appearance of every paragraph, authors write plain-text commands that describe the document structure. A compiler converts the `.tex` source into a PDF.
+Comprehensive notes on LaTeX concepts, syntax, commands, practical examples, compilation, and troubleshooting covered in the Technical Writing laboratory.
 
-**Advantages:** Consistent formatting, high-quality equations, cross-references, bibliographies, reusable templates, and version-control-friendly text files.
+## 📑 Table of Contents
 
-**Limitations:** A learning curve, compilation errors, and sometimes complex package configuration.
+1. [Introduction to LaTeX](#1-introduction-to-latex)
+2. [Basic Document Structure](#2-basic-document-structure)
+3. [Document Classes and Packages](#3-document-classes-and-packages)
+4. [Text Formatting and Sectioning](#4-text-formatting-and-sectioning)
+5. [Lists](#5-lists)
+6. [Mathematical Expressions](#6-mathematical-expressions)
+7. [Tables](#7-tables)
+8. [Figures and Diagrams](#8-figures-and-diagrams)
+9. [Cross-References and Bibliography](#9-cross-references-and-bibliography)
+10. [Special Characters](#10-special-characters)
+11. [Compilation and Generated Files](#11-compilation-and-generated-files)
+12. [Common Errors and Troubleshooting](#12-common-errors-and-troubleshooting)
+13. [Quick Viva Questions](#13-quick-viva-questions)
+14. [Practical Checklist](#14-practical-checklist)
 
 ---
 
-## 2. Basic Structure
+## 1. Introduction to LaTeX
 
-A basic LaTeX document follows this structure:
+LaTeX is a markup-based document preparation and typesetting system widely used for scientific, technical, and academic documentation.
+
+Unlike traditional word processors, LaTeX separates **document content from formatting**. Users write commands in a plain-text `.tex` file, which is processed by a LaTeX compiler to produce a professionally formatted document.
+
+### 🔍 Advantages and Limitations
+
+| Advantages | Limitations |
+|---|---|
+| Consistent document formatting | Initial learning curve |
+| High-quality mathematical equations | Compilation errors require debugging |
+| Automatic numbering and cross-references | Package configuration can be complex |
+| Bibliography and citation management | Less intuitive for visual editing |
+| Reusable document templates | Requires a LaTeX environment |
+| Git-friendly plain-text source files | Some layouts need advanced commands |
+
+### 📌 Important Terms
+
+- **Source File:** A `.tex` file containing LaTeX commands and content.
+- **Compiler:** Processes the source file to generate formatted output.
+- **Preamble:** Contains document configuration and package declarations.
+- **Environment:** Defines structured content using `\begin{}` and `\end{}`.
+- **Package:** Extends LaTeX's built-in functionality.
+
+---
+
+## 2. Basic Document Structure
+
+A LaTeX document consists of two main parts:
+
+1. **Preamble:** Document class, packages, and configuration.
+2. **Document Body:** Visible content enclosed within the document environment.
+
+### 💻 Basic Example
 
 ```latex
 \documentclass[12pt,a4paper]{article}
@@ -33,42 +78,61 @@ Hello, LaTeX!
 \end{document}
 ```
 
-### Explanation
+### 🔍 Command Explanation
 
-| Component | Purpose |
+| Command | Purpose |
 |---|---|
-| `\documentclass{article}` | Selects document layout |
-| `\usepackage{amsmath}` | Adds mathematical tools |
-| `\begin{document}` | Starts visible content |
-| `\maketitle` | Prints title, author and date |
-| `\section{...}` | Adds a numbered heading |
-| `% comment` | Adds source-only comment |
+| `\documentclass{article}` | Defines the document class |
+| `\usepackage{amsmath}` | Enables additional mathematical features |
+| `\title{}` | Defines the document title |
+| `\author{}` | Defines the author |
+| `\date{\today}` | Displays the current compilation date |
+| `\begin{document}` | Begins the document body |
+| `\maketitle` | Generates the title |
+| `\section{}` | Creates a numbered section |
+| `\end{document}` | Ends the document |
+| `% comment` | Adds a source comment ignored during compilation |
 
 ---
 
 ## 3. Document Classes and Packages
 
-### Document Classes
+### 📘 Document Classes
+
+A document class determines the overall structure and layout of a LaTeX document.
 
 | Class | Purpose |
 |---|---|
-| `article` | Short reports and research papers |
-| `report` | Long reports with chapters |
+| `article` | Articles, short reports, and research papers |
+| `report` | Longer reports, theses, and projects |
 | `book` | Books and extensive documents |
 | `beamer` | Presentations and slides |
 
-### Common Packages
+**Syntax:**
+
+```latex
+\documentclass[12pt,a4paper]{article}
+```
+
+Here:
+- `12pt` specifies the base font size.
+- `a4paper` specifies the paper size.
+- `article` specifies the document class.
+
+### 📦 Common Packages
+
+Packages provide additional functionality.
 
 | Package | Function |
 |---|---|
-| `amsmath` | Mathematical typesetting |
-| `graphicx` | Inserting external images |
+| `amsmath` | Advanced mathematical typesetting |
+| `graphicx` | Inserting and resizing images |
 | `hyperref` | Hyperlinks and clickable references |
-| `geometry` | Margins and page dimensions |
-| `booktabs` | Professional tables |
-| `tikz` | Diagrams drawn in LaTeX |
+| `geometry` | Page margins and dimensions |
+| `booktabs` | Professional table formatting |
+| `tikz` | Drawing diagrams and graphics |
 
-Example:
+**Example:**
 
 ```latex
 \usepackage{amsmath}
@@ -76,44 +140,77 @@ Example:
 \usepackage{hyperref}
 ```
 
+**Note:** Packages are normally declared in the preamble, before `\begin{document}`.
+
 ---
 
-## 4. Formatting and Sections
+## 4. Text Formatting and Sectioning
 
-LaTeX provides commands for creating structured headings and formatting text.
+LaTeX provides commands for organizing content and formatting text.
+
+### 📝 Sectioning Commands
 
 ```latex
 \section{Main Heading}
 
 \subsection{Subheading}
 
+\subsubsection{Smaller Heading}
+```
+
+| Command | Purpose |
+|---|---|
+| `\section{}` | Creates a main section |
+| `\subsection{}` | Creates a subsection |
+| `\subsubsection{}` | Creates a lower-level heading |
+
+### ✍️ Text Formatting
+
+```latex
 \textbf{Bold text}
 
 \textit{Italic text}
 
 \emph{Emphasized text}
 
-\newline
+\underline{Underlined text}
 ```
 
-### Important Points
+| Command | Output |
+|---|---|
+| `\textbf{}` | Bold text |
+| `\textit{}` | Italic text |
+| `\emph{}` | Emphasized text, usually italic |
+| `\underline{}` | Underlined text |
 
-- `\section{}` creates a main section.
-- `\subsection{}` creates a subsection.
-- `\textbf{}` produces bold text.
-- `\textit{}` produces italic text.
-- `\emph{}` emphasizes text.
-- `\newline` forces a line break.
+### 📌 Line Breaks and Paragraphs
 
-**Note:** Use a blank line to begin a new paragraph. A double backslash `\\` forces a line break where appropriate, but should not be used as a general paragraph separator.
+```latex
+First paragraph.
+
+Second paragraph.
+```
+
+A blank line starts a new paragraph.
+
+```latex
+First line\\
+Second line
+```
+
+`\\` forces a line break in appropriate contexts.
+
+`\newline` can also create a line break.
+
+**Important:** Avoid using `\\` repeatedly to separate paragraphs.
 
 ---
 
 ## 5. Lists
 
-LaTeX supports ordered and unordered lists.
+LaTeX supports ordered and unordered lists using environments.
 
-### Unordered List
+### 🔹 Unordered List — `itemize`
 
 ```latex
 \begin{itemize}
@@ -122,7 +219,7 @@ LaTeX supports ordered and unordered lists.
 \end{itemize}
 ```
 
-### Ordered List
+### 🔢 Ordered List — `enumerate`
 
 ```latex
 \begin{enumerate}
@@ -131,39 +228,51 @@ LaTeX supports ordered and unordered lists.
 \end{enumerate}
 ```
 
-**Difference:**
+### 🔍 Comparison
 
-- `itemize` creates bullet points.
-- `enumerate` creates numbered lists.
+| Environment | Purpose | Output |
+|---|---|---|
+| `itemize` | Unordered list | Bullet points |
+| `enumerate` | Ordered list | Numbered items |
+
+Each list item begins with `\item`.
 
 ---
 
-## 6. Mathematics
+## 6. Mathematical Expressions
 
-LaTeX is widely used for mathematical and scientific expressions.
+LaTeX is particularly useful for mathematical and scientific notation.
 
-### Inline Mathematics
+### 🔹 Inline Mathematics
 
-```latex
-$E=mc^2$
-```
-
-### Display Mathematics
+Used to include mathematical expressions within a sentence.
 
 ```latex
-\[E=mc^2\]
+The equation is $E=mc^2$.
 ```
 
-### Numbered Equation
+### 🔹 Display Mathematics
+
+Used to display an equation separately without numbering.
+
+```latex
+\[
+E=mc^2
+\]
+```
+
+### 🔹 Numbered Equations
 
 ```latex
 \begin{equation}
-    \bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i
+    \bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i
     \label{eq:mean}
 \end{equation}
 ```
 
-### Mathematical Commands
+The `equation` environment automatically numbers the equation.
+
+### 📐 Important Mathematical Commands
 
 | Command | Purpose |
 |---|---|
@@ -174,8 +283,9 @@ $E=mc^2$
 | `\sum` | Summation |
 | `\int` | Integral |
 | `\bar{x}` | Bar notation |
+| `\pm` | Plus-minus symbol |
 
-### Example: Quadratic Formula
+### 💻 Example: Quadratic Formula
 
 ```latex
 \begin{equation}
@@ -183,11 +293,15 @@ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 \end{equation}
 ```
 
+**Important:** Mathematical commands such as `\frac` and `\sum` must be used in math mode.
+
 ---
 
 ## 7. Tables
 
-Tables organize data into rows and columns.
+Tables organize information into rows and columns.
+
+### 💻 Example
 
 ```latex
 \begin{table}[htbp]
@@ -207,32 +321,43 @@ LaTeX & .tex & .pdf \\
 \end{table}
 ```
 
-### Table Syntax
+### 🔍 Table Syntax
 
-| Symbol | Meaning |
+| Command / Symbol | Meaning |
 |---|---|
 | `l` | Left alignment |
 | `c` | Center alignment |
 | `r` | Right alignment |
 | `&` | Separates columns |
-| `\\` | Ends a row |
+| `\\` | Ends a table row |
 | `\hline` | Draws a horizontal line |
-| `\caption{}` | Adds table caption |
-| `\label{}` | Creates reference key |
+| `\caption{}` | Adds a caption |
+| `\label{}` | Defines a reference key |
+
+### 📌 Important Points
+
+- `tabular` creates the table's rows and columns.
+- `table` provides a floating environment with captions and references.
+- `{lcc}` specifies three columns: left, center, center.
+- `[htbp]` suggests placement here, top, bottom, or on a float page.
 
 ---
 
-## 8. Figures
+## 8. Figures and Diagrams
 
-External images are inserted using the `graphicx` package.
+Figures can be inserted using external image files or created directly using LaTeX drawing packages.
 
-### Import Package
+### 🖼️ Importing Images
+
+The `graphicx` package supports external images.
+
+**Package:**
 
 ```latex
 \usepackage{graphicx}
 ```
 
-### Insert Image
+**Example:**
 
 ```latex
 \begin{figure}[htbp]
@@ -246,25 +371,47 @@ External images are inserted using the `graphicx` package.
 \end{figure}
 ```
 
-### Explanation
+### 🔍 Figure Commands
 
-- `figure` creates a floating figure environment.
-- `\centering` centers the image.
-- `\includegraphics` inserts the image.
-- `\caption` adds a caption.
-- `\label` creates a reference identifier.
+| Command | Purpose |
+|---|---|
+| `figure` | Floating figure environment |
+| `\centering` | Centers content |
+| `\includegraphics` | Inserts an external image |
+| `width=0.5\textwidth` | Sets image width to half the text width |
+| `\caption{}` | Adds a caption |
+| `\label{}` | Creates a reference identifier |
 
-**Important:** The image file must exist at the referenced path.
+**Important:** The referenced image must exist at the specified path.
 
-The supplied sample document instead uses TikZ to draw a diagram, so it does not require an external image.
+### 📐 TikZ Diagrams
+
+TikZ is a LaTeX package used to create diagrams programmatically.
+
+**Package:**
+
+```latex
+\usepackage{tikz}
+```
+
+**Example:**
+
+```latex
+\begin{tikzpicture}
+    \draw (0,0) -- (3,0);
+    \draw (0,0) -- (0,2);
+\end{tikzpicture}
+```
+
+The sample document uses TikZ to generate a diagram without requiring an external image.
 
 ---
 
-## 9. References and Bibliography
+## 9. Cross-References and Bibliography
 
-LaTeX supports automatic cross-references and citations.
+LaTeX supports automatic references to sections, equations, figures, tables, and bibliographic entries.
 
-### Cross-References
+### 🔗 Section References
 
 ```latex
 \section{Introduction}
@@ -273,7 +420,11 @@ LaTeX supports automatic cross-references and citations.
 Refer to Section~\ref{sec:intro}.
 ```
 
-### Equation References
+`\label{}` defines the reference key.
+
+`\ref{}` retrieves the associated number.
+
+### 🔗 Equation References
 
 ```latex
 \begin{equation}
@@ -281,12 +432,12 @@ E = mc^2
 \label{eq:energy}
 \end{equation}
 
-Equation~\eqref{eq:energy}
+Refer to Equation~\eqref{eq:energy}.
 ```
 
-`\eqref` automatically adds parentheses around equation numbers and is provided by `amsmath`.
+`\eqref{}` automatically includes parentheses around the equation number and is provided by `amsmath`.
 
-### Bibliography
+### 📚 Bibliography
 
 ```latex
 \begin{thebibliography}{9}
@@ -297,21 +448,31 @@ Author, Title, Year.
 \end{thebibliography}
 ```
 
-### Citation
+### 📌 Citations
 
 ```latex
-\cite{ref1}
+According to the reference \cite{ref1}, ...
 ```
 
-For larger research documents, BibTeX or biblatex/Biber may be used.
+| Command | Purpose |
+|---|---|
+| `\label{}` | Defines a reference key |
+| `\ref{}` | Retrieves a numbered reference |
+| `\eqref{}` | Retrieves a parenthesized equation number |
+| `\bibitem{}` | Defines a bibliography entry |
+| `\cite{}` | Cites a bibliography entry |
 
-**Note:** Compile twice to update cross-references.
+For larger research documents, BibTeX or `biblatex` with Biber can be used.
+
+**Note:** Cross-references generally require multiple compilation passes.
 
 ---
 
 ## 10. Special Characters
 
-Some symbols have special meanings in LaTeX and must be escaped when used as ordinary text.
+Certain characters have special meanings in LaTeX and must be escaped when used as ordinary text.
+
+### 🔍 Common Special Characters
 
 | Literal Symbol | LaTeX Input |
 |---|---|
@@ -323,7 +484,7 @@ Some symbols have special meanings in LaTeX and must be escaped when used as ord
 | `{` | `\{` |
 | `}` | `\}` |
 
-Example:
+### 💻 Example
 
 ```latex
 The result is 90\%.
@@ -333,122 +494,144 @@ The price is \$100.
 Research \& Development.
 ```
 
+**Important:** An unescaped `%` starts a comment, so the remainder of that source line is ignored.
+
 ---
 
-## 11. Compilation
+## 11. Compilation and Generated Files
 
-LaTeX source files use the `.tex` extension.
+Compilation converts LaTeX source code into a formatted output document.
 
-The compiler converts the source file into a formatted PDF.
-
-### Compilation Commands
+### 🛠️ Compilation Commands
 
 ```bash
 pdflatex sample-document.tex
 pdflatex sample-document.tex
 ```
 
-### Compilation Process
+The second compilation helps resolve cross-references and update numbering.
 
-1. Write the `.tex` source.
+### 🔄 Compilation Process
+
+1. Write or modify the `.tex` source file.
 2. Run the LaTeX compiler.
 3. Generate the PDF and auxiliary files.
-4. Compile again to resolve references.
+4. Compile again to update references.
 5. Review the final PDF.
 
-### Generated Files
+### 📂 Generated Files
 
 | File | Purpose |
 |---|---|
 | `.tex` | Source document |
-| `.pdf` | Compiled document |
-| `.aux` | Reference information |
-| `.log` | Compilation log |
-| `.out` | Additional output metadata |
+| `.pdf` | Compiled output |
+| `.aux` | Auxiliary reference information |
+| `.log` | Compilation messages and errors |
+| `.out` | Additional metadata, often used by packages such as `hyperref` |
+
+**Note:** Auxiliary files are normally excluded from Git repositories using `.gitignore`.
 
 ---
 
-## 12. Common Errors
+## 12. Common Errors and Troubleshooting
+
+### ⚠️ Common Compilation Errors
 
 | Error | Likely Cause | Solution |
 |---|---|---|
-| `Undefined control sequence` | Misspelled command or missing package | Check spelling and package imports |
-| `Missing $ inserted` | Math command outside math mode | Use `$...$` or `\[...\]` |
-| `File ... not found` | Missing image or package | Check file path or install package |
-| `Environment ... undefined` | Missing package or typo | Load package and check spelling |
-| `Reference ... undefined` | Incorrect label or insufficient compilation | Verify label and compile again |
+| `Undefined control sequence` | Misspelled command or missing package | Verify command spelling and package imports |
+| `Missing $ inserted` | Math-only syntax outside math mode | Use `$...$` or `\[...\]` |
+| `File ... not found` | Missing image, source file, or package | Check paths and required packages |
+| `Environment ... undefined` | Missing package or incorrect environment name | Verify spelling and package imports |
+| `Reference ... undefined` | Incorrect label or insufficient compilation | Check labels and recompile |
 
-### Troubleshooting Tips
+### 🔧 Troubleshooting Checklist
 
-- Check that every `\begin{}` has a matching `\end{}`.
-- Verify package imports.
-- Ensure external image paths are correct.
+- Verify that every `\begin{}` has a matching `\end{}`.
+- Check package declarations in the preamble.
+- Confirm external image paths.
 - Use mathematical commands inside math mode.
+- Check spelling and capitalization.
 - Recompile when references are unresolved.
+- Review the `.log` file for detailed error messages.
 
 ---
 
 ## 13. Quick Viva Questions
 
-### Q1. What is LaTeX?
-LaTeX is a document preparation and typesetting system.
+### 🎓 Conceptual Questions
 
-### Q2. What is a `.tex` file?
-A plain-text source file containing LaTeX markup.
+**Q1. What is LaTeX?**
 
-### Q3. What is the preamble?
+LaTeX is a markup-based document preparation and typesetting system.
+
+**Q2. What is a `.tex` file?**
+
+A plain-text source file containing LaTeX commands and document content.
+
+**Q3. What is the preamble?**
+
 The configuration section before `\begin{document}`.
 
-### Q4. Difference between `\section` and `\subsection`?
-They represent different heading levels.
+**Q4. What is the difference between `\section` and `\subsection`?**
 
-### Q5. What does `amsmath` do?
-It adds advanced mathematical typesetting features.
+They create different levels of document headings.
 
-### Q6. Why compile twice?
+**Q5. What is the purpose of `amsmath`?**
+
+It provides additional mathematical typesetting commands and environments.
+
+**Q6. Why is compilation sometimes performed twice?**
+
 To resolve cross-references and update numbering.
 
-### Q7. What is `\label` used for?
-It defines a target for references.
+**Q7. What is `\label` used for?**
 
-### Q8. Difference between LaTeX and Beamer?
-LaTeX is the document preparation system, while Beamer is a LaTeX document class used for presentations.
+It defines a reference key that can be accessed using commands such as `\ref`.
 
-### Q9. What is Overleaf?
-An online LaTeX editor and collaboration platform.
+**Q8. What is the difference between LaTeX and Beamer?**
 
-### Q10. Why use LaTeX with Git?
-Its text-based source makes revisions and collaboration easier to track.
+LaTeX is a document preparation system, while Beamer is a LaTeX document class used to create presentations.
+
+**Q9. What is Overleaf?**
+
+An online LaTeX editor supporting compilation and collaboration.
+
+**Q10. Why is LaTeX suitable for Git?**
+
+Its plain-text source files make version tracking and collaboration easier.
 
 ---
 
 ## 14. Practical Checklist
 
-- [ ] Read the sample source.
-- [ ] Compile the PDF successfully.
-- [ ] Change the title and compile again.
+### ✅ Hands-on Tasks
+
+- [ ] Read and understand the sample `.tex` file.
+- [ ] Compile the sample document successfully.
+- [ ] Modify the title and recompile.
 - [ ] Add a section and an itemized list.
-- [ ] Add an equation with a label and reference.
-- [ ] Explain the table and diagram syntax.
-- [ ] Demonstrate a Git commit for the edited `.tex` file.
+- [ ] Create a mathematical equation with a label.
+- [ ] Reference the equation using `\eqref`.
+- [ ] Explain table and diagram syntax.
+- [ ] Demonstrate a Git commit for the modified `.tex` file.
+
+**Sample Source:** [sample-document.tex](examples/sample-document.tex)
+
+**Compiled Output:** [sample-document.pdf](output/sample-document.pdf)
 
 ---
 
 ## 📚 References
 
-1. [The LaTeX Project](https://www.latex-project.org/)
+1. [LaTeX Project — Official Website](https://www.latex-project.org/)
 2. [Overleaf — Learn LaTeX](https://www.overleaf.com/learn)
 3. [CTAN — Comprehensive TeX Archive Network](https://ctan.org/)
 
 ---
 
-## Contact
+## 👩‍💻 Author
 
-**Ananya Siju**  
-[LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [GitHub](https://github.com/AnanyaIntech-source) | ananyasiju16@gmail.com
+**Ananya Siju**
 
----
-
-> **Author:** [Ananya Siju](https://github.com/AnanyaIntech-source)
-> 
-
+[GitHub](https://github.com/AnanyaIntech-source) | [LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [Email](mailto:ananyasiju16@gmail.com)
