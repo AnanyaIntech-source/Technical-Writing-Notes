@@ -1,125 +1,129 @@
 
 # 📄 Google Docs — Collaborative Technical Documentation
 
-### Technical Writing Laboratory | MNIT Jaipur
-
 > **Write clearly. Collaborate effectively. Document professionally.**
 
-Google Docs is a cloud-based word processor that supports
-document creation, structured formatting, real-time
-collaboration, and revision management.
+Google Docs is a cloud-based word processor used for creating, formatting, sharing, and collaboratively editing documents.
 
-This module demonstrates how Google Docs can be used to
-prepare a professional technical report while exploring
-collaborative writing and document management features.
+This module demonstrates how Google Docs can be used to prepare a structured technical report while exploring document formatting, real-time collaboration, sharing permissions, and revision management.
 
 ---
 
-## 🔗 About Google Docs
+## 🎯 Learning Objectives
 
-Google Docs is part of Google Workspace and provides an
-online environment for creating, editing, and sharing
-documents.
-
-It supports collaborative editing, comments, suggestions,
-version history, and exporting documents into formats
-such as PDF and Microsoft Word.
-
-These features make it useful for technical reports,
-project documentation, research writing, and team-based
-assignments.
-
-## 🎯 Objectives
-
-- Understand cloud-based technical document creation.
-- Apply consistent formatting and heading styles.
-- Organize technical content using sections and tables.
-- Demonstrate commenting and suggesting features.
-- Explore document sharing and access permissions.
-- Understand version history and revision tracking.
+- Understand cloud-based document creation and management.
+- Apply consistent formatting using document styles.
+- Organize technical content with headings, lists, and tables.
+- Explore real-time collaboration, comments, and suggestions.
+- Understand document-sharing permissions.
+- Review version history and document revisions.
 - Export a professionally formatted document as PDF.
-- Maintain project documentation using GitHub.
+- Organize technical documentation using GitHub.
 
-## 📁 Repository Contents
+---
 
-| File / Folder | Purpose |
+## 📂 Contents
+
+| Resource | Description |
 |---|---|
-| [`notes.md`](notes.md) | Detailed concepts, practical notes, troubleshooting, and viva questions |
-| [`sample-document.md`](sample-document.md) | Source content for the sample technical report |
-| [`output/`](output/) | Exported PDF version of the report |
-| [`screenshots/`](screenshots/) | Screenshots demonstrating Google Docs features |
+| [Detailed Notes](notes.md) | Concepts, features, troubleshooting, and viva questions |
+| [Sample Document (PDF)](examples/sample-document.pdf) | Exported technical report created using Google Docs |
+| [Google Docs Link](examples/sample-document-link.md) | Link to the original online document |
+| [Screenshots](screenshots/) | Practical evidence of Google Docs features |
+
+---
+
+## 📂 Repository Structure
+
+The module separates learning notes, practical examples, and screenshots demonstrating document creation and collaboration.
+
+```text
+04-Google-Docs/
+│
+├── README.md
+├── notes.md
+│
+├── examples/
+│   ├── sample-document.pdf
+│   └── sample-document-link.md
+│
+└── screenshots/
+    ├── 01-document-formatting.png
+    ├── 02-sharing-permissions.png
+    ├── 03-comments-suggestions.png
+    └── 04-version-history.png
+```
+
+**Note:** The PDF represents the exported technical report, while the screenshots demonstrate features such as sharing, comments, suggestions, and revision history that cannot be fully represented in a static PDF.
+
+---
 
 ## 🧩 Key Concepts
 
 ### 1. Structured Document Formatting
 
-Professional documents use consistent formatting
-to improve readability and navigation.
+Professional documents use consistent formatting to improve readability, organization, and accessibility.
 
 Important elements include:
 
-- Document title and subtitle
+- Document titles and subtitles
 - Heading and subheading styles
-- Paragraph formatting
+- Paragraph formatting and alignment
 - Bulleted and numbered lists
 - Tables and hyperlinks
 - References and citations
 
 ### 2. Real-Time Collaboration
 
-Google Docs allows multiple authorized users to
-edit the same document.
+Google Docs allows multiple authorized users to work on the same document.
 
-Changes can be synchronized across collaborators,
-reducing the need to exchange multiple file versions.
+Changes are synchronized between collaborators, reducing the need to exchange multiple versions of a file.
 
 ### 3. Comments and Suggestions
 
-Comments support feedback and discussion without
-directly modifying the document.
+**Comments** allow users to provide feedback without directly changing document content.
 
-Suggesting mode allows proposed edits to be
-reviewed before they are accepted or rejected.
+**Suggesting mode** allows users to propose edits that can be reviewed, accepted, or rejected.
 
 ### 4. Version History
 
-Version history records document revisions and
-allows users with appropriate permissions to
-review or restore earlier versions.
+Version history allows authorized users to review previous document revisions, identify changes, and restore earlier versions when necessary.
 
 ### 5. Document Sharing
 
-Google Docs provides different access levels:
+Google Docs supports different access levels.
 
 | Role | Permission |
 |---|---|
-| Viewer | View the document |
-| Commenter | View and comment |
-| Editor | Edit document content |
+| **Viewer** | Can view the document |
+| **Commenter** | Can view and comment |
+| **Editor** | Can edit document content |
 
-## 🛠️ Tools Used
+**Important:** Sharing permissions should be configured carefully to protect document privacy.
 
-| Tool | Role |
+---
+
+## 🛠️ Tools and Requirements
+
+| Tool | Purpose |
 |---|---|
-| Google Docs | Create and format documents |
+| Google Docs | Create, format, and collaborate on documents |
 | Google Drive | Store and organize documents |
-| Web Browser | Access the document editor |
-| Markdown | Maintain report source content |
-| PDF | Distribute the completed report |
-| Git / GitHub | Track and organize assignment files |
+| Web Browser | Access Google Docs |
+| PDF | Export and distribute the completed report |
+| Git / GitHub | Organize and maintain project documentation |
+
+---
 
 ## 💻 Practical Implementation
 
 ### 1. Create a Technical Report
 
-Open [Google Docs](https://docs.google.com/) and
-create a blank document.
+Open [Google Docs](https://docs.google.com/) and create a blank document.
 
-**Report Title:**
-Artificial Intelligence in Modern Software Development
+**Report Title:** Introduction to Technical Writing and Documentation Tools
 
-Use the content provided in
-[`sample-document.md`](sample-document.md).
+Prepare the document using the concepts covered in the Technical Writing laboratory.
 
 ### 2. Apply Professional Formatting
 
@@ -127,26 +131,27 @@ Format the document using:
 
 1. Title and subtitle styles
 2. Heading 1 and Heading 2
-3. Consistent paragraph spacing
+3. Consistent font styles and paragraph spacing
 4. Bulleted and numbered lists
 5. Comparison tables
 6. Hyperlinks and references
+7. Headers, footers, and page numbers
 
-### 3. Demonstrate Collaboration Features
+### 3. Explore Collaboration Features
 
-- Add a comment to a selected paragraph.
+- Add a comment to selected text.
 - Switch to Suggesting mode.
 - Propose a sample revision.
 - Review the suggested change.
-- Explore document sharing permissions.
+- Explore document-sharing permissions.
 
-### 4. Explore Version History
+### 4. Review Version History
 
 Navigate to:
 
 `File → Version history → See version history`
 
-Review the document's available revisions.
+Review previous revisions and identify changes made to the document.
 
 ### 5. Export the Document
 
@@ -154,80 +159,85 @@ Navigate to:
 
 `File → Download → PDF Document (.pdf)`
 
-Save the exported report as:
+Save the exported file as:
 
-`output/sample-technical-report.pdf`
+`examples/sample-document.pdf`
+
+The original online document can be linked through:
+
+[Google Docs — Sample Document Link](examples/sample-document-link.md)
 
 ### 6. Capture Screenshots
 
-Capture evidence of:
+Capture screenshots demonstrating the following features:
 
-- Document editor and formatted report
-- Heading styles and comparison table
-- Commenting and suggesting features
-- Version history
-- PDF export options
+| Screenshot | Feature Demonstrated |
+|---|---|
+| `01-document-formatting.png` | Structured headings, formatted text, and tables |
+| `02-sharing-permissions.png` | Document-sharing settings and access permissions |
+| `03-comments-suggestions.png` | Commenting and suggested edits |
+| `04-version-history.png` | Document revisions and version history |
 
-Store the screenshots in the `screenshots/` folder.
+Store all screenshots inside the `screenshots/` folder.
+
+---
 
 ## 🔄 Documentation Workflow
 
 ```text
 Technical Report Content
-          |
-          v
+         |
+         v
 Google Docs Editor
-          |
-          v
+         |
+         v
 Formatting and Structure
-          |
-          v
+         |
+         v
 Comments and Suggestions
-          |
-          v
-Revision and Version History
-          |
-          v
+         |
+         v
+Sharing and Version History
+         |
+         v
 PDF Export
-          |
-          v
+         |
+         v
 GitHub Documentation
 ```
+---
 
 ## 🔎 Practical Observations
 
-- Heading styles improve document organization.
-- Tables make technical comparisons easier to read.
-- Comments provide a structured feedback mechanism.
-- Suggesting mode separates proposed edits from
-  accepted changes.
-- Version history supports revision tracking.
-- PDF export preserves a distributable document
-  layout, subject to export rendering.
+- Heading styles improve document organization and navigation.
+- Tables present technical comparisons in a structured format.
+- Comments support feedback and collaborative review.
+- Suggesting mode separates proposed edits from accepted changes.
+- Sharing permissions control document access.
+- Version history helps track and restore previous revisions.
+- PDF export provides a portable version of the completed document.
+
+---
 
 ## 🎓 Learning Outcomes
 
-After completing this module, a student should be
-able to create structured technical reports, apply
-professional formatting, demonstrate collaboration
-features, manage document revisions, and export
-documents for sharing and submission.
+Through this module, I learned to create structured technical documents using Google Docs, apply professional formatting, explore collaboration tools, manage document revisions, and export documents for sharing and submission.
+
+The practical also demonstrates how cloud-based documentation can be organized and maintained alongside other technical writing resources using GitHub.
+
+---
 
 ## 📚 References
 
-- [Google Docs](https://docs.google.com/)
+- [Google Docs — Official Website](https://docs.google.com/)
 - [Google Docs Editors Help](https://support.google.com/docs/)
 - [Google Drive Help](https://support.google.com/drive/)
 - [Google Workspace Learning Center](https://support.google.com/a/users/)
 
 ---
 
-## Contact
+## 👩‍💻 Author
 
-**Ananya Siju**  
-[LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [GitHub](https://github.com/AnanyaIntech-source) | ananyasiju16@gmail.com
+**Ananya Siju**
 
----
-
-> **Author:** [Ananya Siju](https://github.com/AnanyaIntech-source)
-> 
+[GitHub](https://github.com/AnanyaIntech-source) | [LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [Email](mailto:ananyasiju16@gmail.com)
