@@ -1,44 +1,68 @@
 
 # ⚙️ Doxygen — Automated Source Code Documentation
 
-### Technical Writing Laboratory | MNIT Jaipur
-
 > **Document the code. Explain the design. Make knowledge reusable.**
 
-Doxygen is a documentation generator that reads specially formatted comments in source code and produces navigable reference documentation.
+Doxygen is a documentation generator that extracts specially formatted comments from source code to produce structured, navigable reference documentation.
 
-This module demonstrates its use with a small, working **C++ Student Record Management** example.
+This module demonstrates Doxygen through a practical **C++ Student Record Management** example, including source documentation, configuration, HTML generation, and output verification.
 
----
+## 🎯 Learning Objectives
 
-## 🔗 About Doxygen
-
-Doxygen is widely used to generate API and source-code documentation for languages including C and C++.
-
-Its output can include HTML pages, class references, function documentation, and source listings.
-
-Documentation is written alongside the implementation so it can evolve with the code.
-
-## 🎯 Objectives
-
-- Explain the purpose of source-code documentation.
-- Identify documentation comments and commonly used tags.
-- Document C++ files, classes, methods, parameters, and return values.
-- Configure Doxygen using a `Doxyfile`.
-- Generate and inspect HTML documentation.
-- Maintain documentation under Git version control.
+- Understand the purpose of automated source-code documentation.
+- Identify Doxygen documentation comments and commonly used tags.
+- Document C++ files, classes, constructors, methods, parameters, and return values.
+- Configure documentation generation using a `Doxyfile`.
+- Generate and navigate HTML documentation.
+- Maintain documented source code using Git and GitHub.
 
 ---
 
-## 📁 Files
+## 📂 Contents
 
-| File | Purpose |
+| Resource | Description |
 |---|---|
-| [`notes.md`](notes.md) | Concepts, command reference, troubleshooting and viva questions |
-| [`example.cpp`](example.cpp) | Compilable C++ student-record demonstration |
-| [`Doxyfile`](Doxyfile) | Doxygen project configuration |
-| [`generated-docs/README.md`](generated-docs/README.md) | Steps for creating generated HTML pages |
-| [`screenshots/README.md`](screenshots/README.md) | Suggested screenshots for the class demonstration |
+| [Detailed Notes](notes.md) | Concepts, commands, troubleshooting, and viva questions |
+| [C++ Source](examples/example.cpp) | Documented Student Record Management program |
+| [Doxyfile](Doxyfile) | Documentation generator configuration |
+| [Main Page](mainpage.md) | Content for the generated documentation homepage |
+| [Generated Documentation](generated-docs/html/index.html) | HTML documentation entry point |
+| [Screenshots](screenshots/) | Visual evidence of generated documentation |
+
+---
+
+## 📂 Repository Structure
+
+The module separates source code, configuration, reference notes, screenshots, and automatically generated documentation.
+
+```text
+03-Doxygen/
+│
+├── README.md
+├── notes.md
+├── Doxyfile
+├── mainpage.md
+│
+├── examples/
+│   └── example.cpp
+│
+├── screenshots/
+│   ├── 00-homepage.png
+│   ├── 01-class-reference.png
+│   ├── 02-constructor.png
+│   ├── 03-function-documentation.png
+│   └── 04-return-documentation.png
+│
+└── generated-docs/
+    └── html/
+        ├── index.html
+        ├── search/
+        ├── classes.html
+        ├── files.html
+        └── ... (other generated files)
+```
+
+**Note:** The HTML, CSS, and JavaScript files inside `generated-docs/html/` are generated automatically by Doxygen and should not be modified manually.
 
 ---
 
@@ -46,11 +70,11 @@ Documentation is written alongside the implementation so it can evolve with the 
 
 ### Documentation Comments
 
-Doxygen recognizes special comment styles, including `/** ... */` and `///`.
+Doxygen recognizes specially formatted comments such as `/** ... */` and `///`.
 
-These differ from ordinary comments because Doxygen can parse their content into structured documentation.
+Unlike ordinary comments, these can be processed into structured documentation for classes, functions, parameters, and return values.
 
-### Example
+### 💻 Example
 
 ```cpp
 /**
@@ -64,31 +88,31 @@ int add(int a, int b) {
 }
 ```
 
-### Common Tags
+### 🔍 Common Documentation Tags
 
-| Tag | Use |
+| Tag | Purpose |
 |---|---|
-| `@file` | Document a source file |
-| `@brief` | Short description |
-| `@param` | Explain a function parameter |
-| `@return` | Explain a return value |
-| `@class` | Document a class explicitly |
-| `@author` | Identify an author |
-| `@date` | Specify a date |
-| `@see` | Link related documentation |
-| `@code` / `@endcode` | Show formatted code examples |
+| `@file` | Documents a source file |
+| `@brief` | Provides a short description |
+| `@param` | Describes a function parameter |
+| `@return` | Describes a return value |
+| `@class` | Explicitly documents a class |
+| `@author` | Identifies the author |
+| `@date` | Specifies a date |
+| `@see` | Links related documentation |
+| `@code` / `@endcode` | Formats code examples |
 
 ---
 
-## 🛠️ Tools
+## 🛠️ Tools and Requirements
 
-| Tool | Role |
+| Tool | Purpose |
 |---|---|
-| C++17 compiler | Compile and test the example |
-| Doxygen | Generate reference documentation |
-| Web browser | View generated HTML pages |
-| VS Code | Edit C++ and configuration files |
-| Git / GitHub | Track and publish source and notes |
+| C++17 Compiler | Compile and test the C++ example |
+| Doxygen | Generate source-code documentation |
+| VS Code | Edit source and configuration files |
+| Web Browser | View generated HTML documentation |
+| Git / GitHub | Version control and repository hosting |
 
 ---
 
@@ -99,11 +123,22 @@ int add(int a, int b) {
 From the `03-Doxygen` directory:
 
 ```bash
-g++ -std=c++17 -Wall -Wextra example.cpp -o student-record
+g++ -std=c++17 -Wall -Wextra examples/example.cpp -o student-record
+```
+
+Run the program:
+
+**Linux / macOS:**
+
+```bash
 ./student-record
 ```
 
-On Windows with MinGW, run `student-record.exe` instead of `./student-record`.
+**Windows (MinGW):**
+
+```bash
+.\student-record.exe
+```
 
 ### Sample Input
 
@@ -122,86 +157,80 @@ Marks: 86
 Result: Pass
 ```
 
----
-
 ### 2. Generate Documentation
 
-Install Doxygen first, then run:
+Install Doxygen and verify the installation:
 
 ```bash
 doxygen --version
+```
+
+Generate the HTML documentation:
+
+```bash
 doxygen Doxyfile
 ```
 
-Open the following file in a web browser:
+Open the generated homepage:
 
-`generated-docs/html/index.html`
+```text
+generated-docs/html/index.html
+```
 
-Explore the class reference, member descriptions, and source browser.
+Explore the class reference, constructors, member functions, and source-code documentation.
 
----
+**Important:** Ensure that the `INPUT` setting in `Doxyfile` includes `examples/example.cpp` and `mainpage.md`, and that `OUTPUT_DIRECTORY` is set to `generated-docs`.
 
-### 3. Understand the Workflow
+### 3. Documentation Workflow
 
 ```text
 C++ Source Code
-      |
-      v
-Doxygen-Style Comments
-      |
-      v
+       |
+       v
+Doxygen Documentation Comments
+       |
+       v
 Doxyfile Configuration
-      |
-      v
-doxygen Doxyfile
-      |
-      v
+       |
+       v
+Run: doxygen Doxyfile
+       |
+       v
 Generated HTML Documentation
-      |
-      v
+       |
+       v
 Browser Inspection and Review
 ```
 
----
-
 ## 🔎 Practical Observations
 
-- The `Student` class demonstrates constructor and member-function documentation.
-- `@param` descriptions clarify input arguments.
-- `@return` explains the meaning of `hasPassed()`'s Boolean result.
-- `SOURCE_BROWSER = YES` exposes a browsable source view.
-- Changing the source or comments requires regenerating the HTML output.
+- The `Student` class demonstrates documentation of constructors and member functions.
+- `@param` tags explain function parameters.
+- `@return` describes the Boolean result of `hasPassed()`.
+- `SOURCE_BROWSER = YES` enables browsing documented source code.
+- Modifying source code or documentation comments requires regenerating the HTML documentation.
 
 ---
 
 ## 🎓 Learning Outcomes
 
-After completing this module, a student should be able to:
+Through this module, I learned to document C++ source code using Doxygen comments, configure documentation generation, and create navigable HTML reference pages.
 
-- Write Doxygen documentation comments.
-- Explain the purpose and structure of a Doxyfile.
-- Generate HTML documentation from C++ source code.
-- Navigate generated class and function references.
-- Demonstrate the relationship between documented source code and generated reference pages.
-- Maintain documentation using Git and GitHub.
+The practical demonstrates how documentation can be maintained alongside source code using Git and GitHub.
 
 ---
 
 ## 📚 References
 
-- [Doxygen Official Website](https://www.doxygen.nl/)
-- [Doxygen Manual](https://www.doxygen.nl/manual/)
-- [Documenting the Code](https://www.doxygen.nl/manual/docblocks.html)
-- [Configuration Reference](https://www.doxygen.nl/manual/config.html)
+- [Doxygen — Official Website](https://www.doxygen.nl/)
+- [Doxygen — User Manual](https://www.doxygen.nl/manual/)
+- [Doxygen — Documenting the Code](https://www.doxygen.nl/manual/docblocks.html)
+- [Doxygen — Configuration Reference](https://www.doxygen.nl/manual/config.html)
 
 ---
 
-## Contact
+## 👩‍💻 Author
 
-**Ananya Siju**  
-[LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [GitHub](https://github.com/AnanyaIntech-source) | ananyasiju16@gmail.com
+**Ananya Siju**
 
----
-
-> **Author:** [Ananya Siju](https://github.com/AnanyaIntech-source)
-> 
+[GitHub](https://github.com/AnanyaIntech-source) | [LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [Email](mailto:ananyasiju16@gmail.com)
