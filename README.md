@@ -1,3 +1,4 @@
+
 # 📚 Technical Writing Notes
 
 ### Technical Documentation, Scientific Typesetting & Version Control
@@ -174,23 +175,32 @@ Technical-Writing-Notes/
 │   ├── examples/
 │   │   └── sample-document.tex
 │   └── output/
+│       └── sample-document.pdf
 │
 ├── 02-Beamer/
 │   ├── README.md
 │   ├── notes.md
-│   ├── presentation.tex
+│   ├── examples/
+│   │   └── presentation.tex
 │   └── output/
 │
 ├── 03-Doxygen/
 │   ├── README.md
 │   ├── notes.md
-│   ├── example.cpp
 │   ├── Doxyfile
+│   ├── mainpage.md
+│   ├── examples/
+│   │   └── example.cpp
+│   ├── generated-docs/
+│   │   └── html/
 │   └── screenshots/
 │
 ├── 04-Google-Docs/
 │   ├── README.md
 │   ├── notes.md
+│   ├── examples/
+│   │   ├── sample-document.pdf
+│   │   └── sample-document-link.md
 │   └── screenshots/
 │
 ├── 05-Git/
@@ -201,17 +211,15 @@ Technical-Writing-Notes/
 │
 ├── 06-GitHub/
 │   ├── README.md
-│   ├── github-workflow.md
+│   ├── github-features.md
+│   ├── practical-exercises.md
 │   └── screenshots/
-│
-├── assets/
-│   └── images/
 │
 ├── LICENSE
 └── README.md
 ```
 
-> **Note:** The directory structure represents the intended organization of this repository. Documentation, examples, and practical outputs will be added as the coursework progresses.
+> **Note:** The structure summarizes the organized course modules. Practical outputs and screenshots should be added as the corresponding activities are completed.
 
 ---
 
@@ -342,7 +350,6 @@ Malaviya National Institute of Technology, Jaipur
 
 [LinkedIn](https://www.linkedin.com/in/ananya-siju-a04835291/) | [GitHub](https://github.com/AnanyaIntech-source) | ananyasiju16@gmail.com
 
-
 ---
 
 > **Author:** Ananya Siju
@@ -358,4 +365,3 @@ Malaviya National Institute of Technology, Jaipur
 *Transforming technical knowledge into clear, structured, and accessible documentation.*
 
 </div>
-
