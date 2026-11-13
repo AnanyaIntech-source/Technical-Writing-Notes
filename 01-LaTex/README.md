@@ -7,7 +7,7 @@ LaTeX is a document preparation system widely used for technical reports, resear
 
 This module documents the concepts covered in the Technical Writing laboratory, along with a practical example demonstrating LaTeX document creation and compilation.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 - Understand the difference between LaTeX source files and compiled PDFs.
 - Identify document classes, packages, the preamble, and document environments.
@@ -15,7 +15,7 @@ This module documents the concepts covered in the Technical Writing laboratory, 
 - Implement cross-references and bibliographic references.
 - Compile `.tex` files and troubleshoot common errors.
 
-## 📂 Contents
+## Contents
 
 | Resource | Description |
 |---|---|
@@ -23,7 +23,7 @@ This module documents the concepts covered in the Technical Writing laboratory, 
 | [Sample Source](examples/sample-document.tex) | Complete LaTeX document demonstrating key features |
 | [Sample PDF](output/sample-document.pdf) | Compiled output of the sample source |
 
-## 🔍 Key Concepts
+## Key Concepts
 
 | Concept | Description |
 |---|---|
@@ -33,7 +33,7 @@ This module documents the concepts covered in the Technical Writing laboratory, 
 | **Packages** | Extend functionality using packages such as `amsmath`, `graphicx`, and `hyperref`. |
 | **Compilation** | Converts `.tex` source files into formatted documents, typically PDFs. |
 
-## 🛠️ Running the Example
+## Running the Example
 
 ### Option 1: Using Overleaf
 
@@ -58,7 +58,7 @@ The generated PDF will appear inside `examples/`.
 
 **Note:** Compiling twice helps resolve cross-references. Auxiliary files such as `.aux` and `.log` should generally be excluded from version control.
 
-## 📘 Practical Demonstration
+## Practical Demonstration
 
 The sample document demonstrates:
 
@@ -74,13 +74,13 @@ The sample document demonstrates:
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 Through this module, I learned to structure, format, compile, and troubleshoot LaTeX documents while applying these concepts to technical and academic documentation.
 
 ---
 
-## 📚 References
+## References
 
 - [LaTeX Project — Official Website](https://www.latex-project.org/)
 - [Overleaf — LaTeX Documentation](https://www.overleaf.com/learn)
