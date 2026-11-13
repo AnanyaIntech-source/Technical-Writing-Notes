@@ -171,7 +171,6 @@ Technical-Writing-Notes/
 │
 ├── 01-LaTeX/
 │   ├── README.md
-│   ├── notes.md
 │   ├── examples/
 │   │   └── sample-document.tex
 │   └── output/
@@ -179,14 +178,12 @@ Technical-Writing-Notes/
 │
 ├── 02-Beamer/
 │   ├── README.md
-│   ├── notes.md
 │   ├── examples/
 │   │   └── presentation.tex
 │   └── output/
 │
 ├── 03-Doxygen/
 │   ├── README.md
-│   ├── notes.md
 │   ├── Doxyfile
 │   ├── mainpage.md
 │   ├── examples/
@@ -197,7 +194,6 @@ Technical-Writing-Notes/
 │
 ├── 04-Google-Docs/
 │   ├── README.md
-│   ├── notes.md
 │   ├── examples/
 │   │   ├── sample-document.pdf
 │   │   └── sample-document-link.md
