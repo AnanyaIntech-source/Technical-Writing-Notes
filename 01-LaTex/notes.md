@@ -5,7 +5,7 @@
 
 Comprehensive notes on LaTeX concepts, syntax, commands, practical examples, compilation, and troubleshooting covered in the Technical Writing laboratory.
 
-## 📑 Table of Contents
+## Table of Contents
 
 1. [Introduction to LaTeX](#1-introduction-to-latex)
 2. [Basic Document Structure](#2-basic-document-structure)
@@ -30,7 +30,7 @@ LaTeX is a markup-based document preparation and typesetting system widely used 
 
 Unlike traditional word processors, LaTeX separates **document content from formatting**. Users write commands in a plain-text `.tex` file, which is processed by a LaTeX compiler to produce a professionally formatted document.
 
-### 🔍 Advantages and Limitations
+### Advantages and Limitations
 
 | Advantages | Limitations |
 |---|---|
@@ -41,7 +41,7 @@ Unlike traditional word processors, LaTeX separates **document content from form
 | Reusable document templates | Requires a LaTeX environment |
 | Git-friendly plain-text source files | Some layouts need advanced commands |
 
-### 📌 Important Terms
+### Important Terms
 
 - **Source File:** A `.tex` file containing LaTeX commands and content.
 - **Compiler:** Processes the source file to generate formatted output.
@@ -58,7 +58,7 @@ A LaTeX document consists of two main parts:
 1. **Preamble:** Document class, packages, and configuration.
 2. **Document Body:** Visible content enclosed within the document environment.
 
-### 💻 Basic Example
+### Basic Example
 
 ```latex
 \documentclass[12pt,a4paper]{article}
@@ -78,7 +78,7 @@ Hello, LaTeX!
 \end{document}
 ```
 
-### 🔍 Command Explanation
+### Command Explanation
 
 | Command | Purpose |
 |---|---|
@@ -97,7 +97,7 @@ Hello, LaTeX!
 
 ## 3. Document Classes and Packages
 
-### 📘 Document Classes
+### Document Classes
 
 A document class determines the overall structure and layout of a LaTeX document.
 
@@ -119,7 +119,7 @@ Here:
 - `a4paper` specifies the paper size.
 - `article` specifies the document class.
 
-### 📦 Common Packages
+### Common Packages
 
 Packages provide additional functionality.
 
@@ -148,7 +148,7 @@ Packages provide additional functionality.
 
 LaTeX provides commands for organizing content and formatting text.
 
-### 📝 Sectioning Commands
+### Sectioning Commands
 
 ```latex
 \section{Main Heading}
@@ -164,7 +164,7 @@ LaTeX provides commands for organizing content and formatting text.
 | `\subsection{}` | Creates a subsection |
 | `\subsubsection{}` | Creates a lower-level heading |
 
-### ✍️ Text Formatting
+### Text Formatting
 
 ```latex
 \textbf{Bold text}
@@ -183,7 +183,7 @@ LaTeX provides commands for organizing content and formatting text.
 | `\emph{}` | Emphasized text, usually italic |
 | `\underline{}` | Underlined text |
 
-### 📌 Line Breaks and Paragraphs
+### Line Breaks and Paragraphs
 
 ```latex
 First paragraph.
@@ -210,7 +210,7 @@ Second line
 
 LaTeX supports ordered and unordered lists using environments.
 
-### 🔹 Unordered List — `itemize`
+### Unordered List — `itemize`
 
 ```latex
 \begin{itemize}
@@ -219,7 +219,7 @@ LaTeX supports ordered and unordered lists using environments.
 \end{itemize}
 ```
 
-### 🔢 Ordered List — `enumerate`
+### Ordered List — `enumerate`
 
 ```latex
 \begin{enumerate}
@@ -228,7 +228,7 @@ LaTeX supports ordered and unordered lists using environments.
 \end{enumerate}
 ```
 
-### 🔍 Comparison
+### Comparison
 
 | Environment | Purpose | Output |
 |---|---|---|
@@ -243,7 +243,7 @@ Each list item begins with `\item`.
 
 LaTeX is particularly useful for mathematical and scientific notation.
 
-### 🔹 Inline Mathematics
+### Inline Mathematics
 
 Used to include mathematical expressions within a sentence.
 
@@ -251,7 +251,7 @@ Used to include mathematical expressions within a sentence.
 The equation is $E=mc^2$.
 ```
 
-### 🔹 Display Mathematics
+### Display Mathematics
 
 Used to display an equation separately without numbering.
 
@@ -261,7 +261,7 @@ E=mc^2
 \]
 ```
 
-### 🔹 Numbered Equations
+### Numbered Equations
 
 ```latex
 \begin{equation}
@@ -272,7 +272,7 @@ E=mc^2
 
 The `equation` environment automatically numbers the equation.
 
-### 📐 Important Mathematical Commands
+### Important Mathematical Commands
 
 | Command | Purpose |
 |---|---|
@@ -285,7 +285,7 @@ The `equation` environment automatically numbers the equation.
 | `\bar{x}` | Bar notation |
 | `\pm` | Plus-minus symbol |
 
-### 💻 Example: Quadratic Formula
+### Example: Quadratic Formula
 
 ```latex
 \begin{equation}
@@ -301,7 +301,7 @@ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 
 Tables organize information into rows and columns.
 
-### 💻 Example
+### Example
 
 ```latex
 \begin{table}[htbp]
@@ -321,7 +321,7 @@ LaTeX & .tex & .pdf \\
 \end{table}
 ```
 
-### 🔍 Table Syntax
+### Table Syntax
 
 | Command / Symbol | Meaning |
 |---|---|
@@ -334,7 +334,7 @@ LaTeX & .tex & .pdf \\
 | `\caption{}` | Adds a caption |
 | `\label{}` | Defines a reference key |
 
-### 📌 Important Points
+### Important Points
 
 - `tabular` creates the table's rows and columns.
 - `table` provides a floating environment with captions and references.
@@ -347,7 +347,7 @@ LaTeX & .tex & .pdf \\
 
 Figures can be inserted using external image files or created directly using LaTeX drawing packages.
 
-### 🖼️ Importing Images
+### Importing Images
 
 The `graphicx` package supports external images.
 
@@ -371,7 +371,7 @@ The `graphicx` package supports external images.
 \end{figure}
 ```
 
-### 🔍 Figure Commands
+### Figure Commands
 
 | Command | Purpose |
 |---|---|
@@ -384,7 +384,7 @@ The `graphicx` package supports external images.
 
 **Important:** The referenced image must exist at the specified path.
 
-### 📐 TikZ Diagrams
+### TikZ Diagrams
 
 TikZ is a LaTeX package used to create diagrams programmatically.
 
@@ -411,7 +411,7 @@ The sample document uses TikZ to generate a diagram without requiring an externa
 
 LaTeX supports automatic references to sections, equations, figures, tables, and bibliographic entries.
 
-### 🔗 Section References
+### Section References
 
 ```latex
 \section{Introduction}
@@ -424,7 +424,7 @@ Refer to Section~\ref{sec:intro}.
 
 `\ref{}` retrieves the associated number.
 
-### 🔗 Equation References
+### Equation References
 
 ```latex
 \begin{equation}
@@ -437,7 +437,7 @@ Refer to Equation~\eqref{eq:energy}.
 
 `\eqref{}` automatically includes parentheses around the equation number and is provided by `amsmath`.
 
-### 📚 Bibliography
+### Bibliography
 
 ```latex
 \begin{thebibliography}{9}
@@ -448,7 +448,7 @@ Author, Title, Year.
 \end{thebibliography}
 ```
 
-### 📌 Citations
+### Citations
 
 ```latex
 According to the reference \cite{ref1}, ...
@@ -472,7 +472,7 @@ For larger research documents, BibTeX or `biblatex` with Biber can be used.
 
 Certain characters have special meanings in LaTeX and must be escaped when used as ordinary text.
 
-### 🔍 Common Special Characters
+### Common Special Characters
 
 | Literal Symbol | LaTeX Input |
 |---|---|
@@ -484,7 +484,7 @@ Certain characters have special meanings in LaTeX and must be escaped when used 
 | `{` | `\{` |
 | `}` | `\}` |
 
-### 💻 Example
+### Example
 
 ```latex
 The result is 90\%.
@@ -502,7 +502,7 @@ Research \& Development.
 
 Compilation converts LaTeX source code into a formatted output document.
 
-### 🛠️ Compilation Commands
+### Compilation Commands
 
 ```bash
 pdflatex sample-document.tex
@@ -511,7 +511,7 @@ pdflatex sample-document.tex
 
 The second compilation helps resolve cross-references and update numbering.
 
-### 🔄 Compilation Process
+### Compilation Process
 
 1. Write or modify the `.tex` source file.
 2. Run the LaTeX compiler.
@@ -519,7 +519,7 @@ The second compilation helps resolve cross-references and update numbering.
 4. Compile again to update references.
 5. Review the final PDF.
 
-### 📂 Generated Files
+### Generated Files
 
 | File | Purpose |
 |---|---|
@@ -535,7 +535,7 @@ The second compilation helps resolve cross-references and update numbering.
 
 ## 12. Common Errors and Troubleshooting
 
-### ⚠️ Common Compilation Errors
+### Common Compilation Errors
 
 | Error | Likely Cause | Solution |
 |---|---|---|
@@ -545,7 +545,7 @@ The second compilation helps resolve cross-references and update numbering.
 | `Environment ... undefined` | Missing package or incorrect environment name | Verify spelling and package imports |
 | `Reference ... undefined` | Incorrect label or insufficient compilation | Check labels and recompile |
 
-### 🔧 Troubleshooting Checklist
+### Troubleshooting Checklist
 
 - Verify that every `\begin{}` has a matching `\end{}`.
 - Check package declarations in the preamble.
@@ -559,7 +559,7 @@ The second compilation helps resolve cross-references and update numbering.
 
 ## 13. Quick Viva Questions
 
-### 🎓 Conceptual Questions
+### Conceptual Questions
 
 **Q1. What is LaTeX?**
 
@@ -605,7 +605,7 @@ Its plain-text source files make version tracking and collaboration easier.
 
 ## 14. Practical Checklist
 
-### ✅ Hands-on Tasks
+### Hands-on Tasks
 
 - [ ] Read and understand the sample `.tex` file.
 - [ ] Compile the sample document successfully.
@@ -622,7 +622,7 @@ Its plain-text source files make version tracking and collaboration easier.
 
 ---
 
-## 📚 References
+## References
 
 1. [LaTeX Project — Official Website](https://www.latex-project.org/)
 2. [Overleaf — Learn LaTeX](https://www.overleaf.com/learn)
