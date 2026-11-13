@@ -13,7 +13,7 @@ It serves as both an **academic learning record** and a practical reference for 
 
 ---
 
-## 🔗 About
+## About
 
 Technical writing plays an essential role in software development, research, engineering, and collaborative projects.
 
@@ -34,9 +34,9 @@ This repository brings together six essential tools used in modern technical doc
 
 ---
 
-## 🚀 Topics Covered
+## Topics Covered
 
-### 📝 1. LaTeX — Scientific Document Preparation
+### 1. LaTeX — Scientific Document Preparation
 
 LaTeX is a document preparation system widely used for academic papers, scientific publications, technical reports, and mathematical documentation.
 
@@ -50,11 +50,11 @@ LaTeX is a document preparation system widely used for academic papers, scientif
 - Cross-referencing and citations.
 - Document compilation and PDF generation.
 
-📂 **Documentation:** [LaTeX Notes](01-LaTeX/README.md)
+**📂 Documentation:** [LaTeX Notes](01-LaTeX/README.md)
 
 ---
 
-### 📊 2. Beamer — Professional Presentations
+### 2. Beamer — Professional Presentations
 
 Beamer is a LaTeX document class used to create structured, high-quality presentations, particularly in academic and technical environments.
 
@@ -67,11 +67,11 @@ Beamer is a LaTeX document class used to create structured, high-quality present
 - Overlays and incremental content.
 - Presentation compilation.
 
-📂 **Documentation:** [Beamer Notes](02-Beamer/README.md)
+**📂 Documentation:** [Beamer Notes](02-Beamer/README.md)
 
 ---
 
-### ⚙️ 3. Doxygen — Source Code Documentation
+### 3. Doxygen — Source Code Documentation
 
 Doxygen is a documentation generator that extracts structured information from source code comments and produces readable technical documentation.
 
@@ -85,11 +85,11 @@ Doxygen is a documentation generator that extracts structured information from s
 - Generating HTML and LaTeX documentation.
 - Exploring generated documentation.
 
-📂 **Documentation:** [Doxygen Notes](03-Doxygen/README.md)
+**📂 Documentation:** [Doxygen Notes](03-Doxygen/README.md)
 
 ---
 
-### 📄 4. Google Docs — Collaborative Documentation
+### 4. Google Docs — Collaborative Documentation
 
 Google Docs is a cloud-based document editor that supports real-time collaboration, document formatting, and shared editing workflows.
 
@@ -103,11 +103,11 @@ Google Docs is a cloud-based document editor that supports real-time collaborati
 - Version history.
 - Exporting and sharing documents.
 
-📂 **Documentation:** [Google Docs Notes](04-Google-Docs/README.md)
+**📂 Documentation:** [Google Docs Notes](04-Google-Docs/README.md)
 
 ---
 
-### 🌿 5. Git — Distributed Version Control
+### 5. Git — Distributed Version Control
 
 Git is a distributed version control system used to track file changes, maintain development history, and coordinate work across software projects.
 
@@ -123,13 +123,13 @@ Git is a distributed version control system used to track file changes, maintain
 - Resolving merge conflicts.
 - Understanding common Git commands.
 
-📂 **Documentation:** [Git Notes](05-Git/README.md)
+**📂 Documentation:** [Git Notes](05-Git/README.md)
 
-📌 **Command Reference:** [Git Commands](05-Git/git-commands.md)
+**Command Reference:** [Git Commands](05-Git/git-commands.md)
 
 ---
 
-### 🌐 6. GitHub — Repository Management & Collaboration
+### 6. GitHub — Repository Management & Collaboration
 
 GitHub is a cloud-based platform built around Git that enables repository hosting, collaboration, code review, and project management.
 
@@ -145,11 +145,11 @@ GitHub is a cloud-based platform built around Git that enables repository hostin
 - Forking and cloning repositories.
 - Basic GitHub workflows.
 
-📂 **Documentation:** [GitHub Notes](06-GitHub/README.md)
+**📂 Documentation:** [GitHub Notes](06-GitHub/README.md)
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 | Tool | Purpose |
 |------|---------|
@@ -164,7 +164,7 @@ GitHub is a cloud-based platform built around Git that enables repository hostin
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 Technical-Writing-Notes/
@@ -219,11 +219,10 @@ Technical-Writing-Notes/
 └── README.md
 ```
 
-> **Note:** The structure summarizes the organized course modules. Practical outputs and screenshots should be added as the corresponding activities are completed.
 
 ---
 
-## 💻 Git Command Reference
+## Git Command Reference
 
 A major component of this repository is understanding and executing Git commands through practical demonstrations.
 
@@ -252,7 +251,7 @@ Detailed explanations, examples, and additional commands are maintained in the d
 
 ---
 
-## 🔄 Documentation Workflow
+## Documentation Workflow
 
 The repository follows a structured documentation process.
 
@@ -282,7 +281,7 @@ This workflow emphasizes both conceptual understanding and practical implementat
 
 ---
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 Through this coursework, the intended learning outcomes include:
 
@@ -298,7 +297,7 @@ Through this coursework, the intended learning outcomes include:
 
 ---
 
-## 📖 References & Resources
+## References & Resources
 
 The following official resources support the concepts covered in this repository.
 
@@ -315,7 +314,7 @@ The following official resources support the concepts covered in this repository
 
 ---
 
-## 🏫 Academic Context
+## Academic Context
 
 **Technical Writing Laboratory**
 
@@ -333,7 +332,7 @@ This repository has been created to organize and demonstrate the concepts and pr
 
 ---
 
-## 📜 License
+## License
 
 This repository is distributed under the terms of the [MIT License](LICENSE).
 
